@@ -1,3 +1,11 @@
+import warnings
+import numpy as np
+
+# Suppress NumPy experimental build warnings on Windows
+warnings.filterwarnings('ignore', message='.*Numpy built with MINGW-W64.*')
+warnings.filterwarnings('ignore', message='.*invalid value encountered.*')
+np.seterr(invalid='ignore')
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -16,7 +24,7 @@ from src.performance_analyzer import PerformanceAnalyzer
 # Set page config
 st.set_page_config(page_title="DNA Pattern Matcher", layout="wide", initial_sidebar_state="expanded")
 
-# ---------------- Sidebar Navigation ----------------
+st.write("App is loading...")
 st.sidebar.title("🧬 Navigation")
 page = st.sidebar.radio(
     "Go to",
