@@ -25,7 +25,7 @@ class MotifDatabase:
             'description': '-10 box in bacterial promoter, recognized by sigma factor'
         },
         'KOZAK_SEQUENCE': {
-            'sequence': 'GCCRCCATGG',
+            'sequence': 'GCCaCCATGG',
             'organism': 'Eukaryotes',
             'function': 'Translation initiation',
             'position': 'Start codon region',
